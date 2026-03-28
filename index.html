@@ -7,20 +7,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #1a1008;
-    --card: #241a0e;
-    --accent: #f5a623;
-    --accent2: #e05c5c;
-    --accent3: #7ecfb3;
-    --accent4: #9b8bff;
-    --text: #f5ece0;
-    --muted: #9a8878;
-    --border: #3a2e20;
+    --bg: #1a1008; --card: #241a0e; --accent: #f5a623;
+    --accent2: #e05c5c; --accent3: #7ecfb3; --accent4: #9b8bff;
+    --accent5: #ff9f43; --text: #f5ece0; --muted: #9a8878; --border: #3a2e20;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { background: var(--bg); color: var(--text); font-family: 'Nunito', sans-serif; overflow-x: hidden; }
  
-  /* NAV */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     background: rgba(26,16,8,0.95); backdrop-filter: blur(10px);
@@ -31,35 +24,12 @@
   nav a { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; padding: 0.3rem 0.7rem; border-radius: 999px; transition: all 0.2s; }
   nav a:hover { color: var(--accent); }
  
-  /* HERO */
-  .hero {
-    min-height: 100vh; display: flex; flex-direction: column;
-    justify-content: center; align-items: center; text-align: center;
-    padding: 6rem 2rem 2rem; position: relative; overflow: hidden;
-  }
-  .hero::before {
-    content: ''; position: absolute; inset: 0;
-    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(245,166,35,0.15) 0%, transparent 70%);
-  }
-  .hero-tag {
-    font-size: 0.8rem; font-weight: 700; letter-spacing: 0.25em;
-    text-transform: uppercase; color: var(--accent);
-    border: 1px solid var(--accent); padding: 0.35rem 0.9rem;
-    border-radius: 999px; margin-bottom: 1.8rem; display: inline-block;
-    animation: fadeUp 0.6s ease both;
-  }
-  h1 {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: clamp(3.5rem, 11vw, 9rem); line-height: 0.9;
-    font-weight: 900; letter-spacing: 0.01em;
-    animation: fadeUp 0.7s 0.1s ease both;
-  }
+  .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 6rem 2rem 2rem; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(245,166,35,0.15) 0%, transparent 70%); }
+  .hero-tag { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: var(--accent); border: 1px solid var(--accent); padding: 0.35rem 0.9rem; border-radius: 999px; margin-bottom: 1.8rem; display: inline-block; animation: fadeUp 0.6s ease both; }
+  h1 { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(3.5rem, 11vw, 9rem); line-height: 0.9; font-weight: 900; letter-spacing: 0.01em; animation: fadeUp 0.7s 0.1s ease both; }
   h1 span { color: var(--accent); }
-  .hero-sub {
-    max-width: 540px; margin: 1.5rem auto 2.5rem;
-    color: var(--muted); font-size: 1.05rem; line-height: 1.7;
-    animation: fadeUp 0.7s 0.2s ease both;
-  }
+  .hero-sub { max-width: 540px; margin: 1.5rem auto 2.5rem; color: var(--muted); font-size: 1.05rem; line-height: 1.7; animation: fadeUp 0.7s 0.2s ease both; }
   .cta-row { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; animation: fadeUp 0.7s 0.3s ease both; }
   .btn { padding: 0.85rem 2rem; border-radius: 10px; font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 0.95rem; cursor: pointer; text-decoration: none; transition: all 0.2s; display: inline-block; }
   .btn-primary { background: var(--accent); color: #1a1008; border: none; }
@@ -71,14 +41,12 @@
   .scroll-hint { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 0.4rem; color: var(--muted); font-size: 0.75rem; letter-spacing: 0.1em; animation: bounce 2s infinite; }
   .scroll-hint::after { content: '↓'; font-size: 1.2rem; }
  
-  /* STATS */
   .stats { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); display: grid; grid-template-columns: repeat(4, 1fr); text-align: center; }
   .stat { padding: 2rem 1rem; border-right: 1px solid var(--border); }
   .stat:last-child { border-right: none; }
   .stat-num { font-family: 'Barlow Condensed', sans-serif; font-size: 3rem; font-weight: 900; color: var(--accent); line-height: 1; }
   .stat-label { font-size: 0.8rem; color: var(--muted); margin-top: 0.3rem; text-transform: uppercase; letter-spacing: 0.08em; }
  
-  /* SECTIONS */
   section { max-width: 1100px; margin: 0 auto; padding: 5rem 2rem; }
   .section-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
   .section-label.green { color: var(--accent3); }
@@ -87,7 +55,6 @@
   h2 { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; line-height: 1; margin-bottom: 1rem; }
   .section-intro { color: var(--muted); max-width: 520px; line-height: 1.7; margin-bottom: 3rem; }
  
-  /* CARDS */
   .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
   .card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; transition: border-color 0.2s, transform 0.2s; }
   .card:hover { border-color: var(--accent); transform: translateY(-4px); }
@@ -102,7 +69,6 @@
   .card-tip.red { color: var(--accent2); }
   .card-tip.purple { color: var(--accent4); }
  
-  /* TIPS GRID */
   .tips-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
   .tip-row { display: flex; align-items: flex-start; gap: 1rem; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.2rem 1.4rem; transition: border-color 0.2s; }
   .tip-row:hover { border-color: var(--accent); }
@@ -110,7 +76,6 @@
   .tip-text strong { display: block; font-size: 0.95rem; margin-bottom: 0.2rem; font-weight: 700; }
   .tip-text span { font-size: 0.85rem; color: var(--muted); line-height: 1.5; }
  
-  /* HIGHLIGHT BOXES */
   .highlight-box { border-radius: 20px; padding: 3rem; display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; margin-bottom: 2rem; }
   .highlight-box.amber { background: linear-gradient(135deg, #241a0e 0%, #2e1e00 100%); border: 1px solid rgba(245,166,35,0.3); }
   .highlight-box.green { background: linear-gradient(135deg, #0a1e1a 0%, #0d2820 100%); border: 1px solid rgba(126,207,179,0.3); }
@@ -120,21 +85,18 @@
   .highlight-box p { color: var(--muted); font-size: 0.95rem; line-height: 1.7; max-width: 480px; margin-bottom: 1.2rem; }
   .box-emoji { font-size: 5rem; line-height: 1; }
  
-  /* PILLS */
   .pills { display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: 1rem; }
   .pill { background: rgba(245,166,35,0.1); border: 1px solid rgba(245,166,35,0.3); color: var(--accent); font-size: 0.82rem; font-weight: 700; padding: 0.35rem 0.9rem; border-radius: 999px; }
   .pill.green { background: rgba(126,207,179,0.1); border-color: rgba(126,207,179,0.3); color: var(--accent3); }
   .pill.red { background: rgba(224,92,92,0.1); border-color: rgba(224,92,92,0.3); color: var(--accent2); }
   .pill.purple { background: rgba(155,139,255,0.1); border-color: rgba(155,139,255,0.3); color: var(--accent4); }
  
-  /* RITUAL */
   .ritual-card { background: linear-gradient(135deg, #150a2e, #0d0d1a); border: 1px solid rgba(155,139,255,0.3); border-radius: 20px; padding: 3rem; text-align: center; margin-bottom: 2rem; }
   .ritual-card h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 2rem; font-weight: 900; color: #c4b5fd; margin-bottom: 1rem; }
   .ritual-steps { display: flex; flex-direction: column; gap: 0.8rem; margin: 1.5rem 0; }
   .ritual-step { background: rgba(155,139,255,0.08); border: 1px solid rgba(155,139,255,0.2); border-radius: 12px; padding: 1rem 1.5rem; color: var(--text); font-size: 0.95rem; line-height: 1.6; }
   .ritual-affirmation { font-family: 'Barlow Condensed', sans-serif; font-size: 1.8rem; font-weight: 900; color: #c4b5fd; margin-top: 1.5rem; line-height: 1.3; }
  
-  /* TIPS SMALL GRID */
   .small-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
   .small-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 1.5rem; text-align: center; transition: all 0.2s; }
   .small-card:hover { border-color: var(--accent3); transform: translateY(-3px); }
@@ -142,7 +104,6 @@
   .small-card h4 { font-family: 'Barlow Condensed', sans-serif; font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; }
   .small-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
  
-  /* HELPLINES */
   .helpline-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.2rem; }
   .helpline-card { background: linear-gradient(135deg, #241a0e, #0d1a16); border: 1px solid rgba(126,207,179,0.2); border-radius: 14px; padding: 1.5rem; text-decoration: none; transition: all 0.2s; display: flex; flex-direction: column; gap: 0.6rem; }
   .helpline-card:hover { border-color: var(--accent3); transform: translateY(-3px); }
@@ -151,26 +112,47 @@
   .helpline-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
   .helpline-contact { font-size: 0.9rem; font-weight: 700; color: var(--accent3); }
  
-  /* AFFILIATE */
+  /* AFFILIATE GRID */
   .affiliate-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.2rem; }
   .aff-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 1.5rem; display: flex; flex-direction: column; gap: 0.8rem; transition: all 0.2s; text-decoration: none; }
   .aff-card:hover { border-color: var(--accent); transform: translateY(-3px); }
-  .aff-card.featured { border-color: rgba(245,166,35,0.3); background: linear-gradient(135deg, #241a0e, #2e1e00); }
+  .aff-card.featured { border-color: rgba(245,166,35,0.35); background: linear-gradient(135deg, #241a0e, #2e1e00); }
   .aff-card.featured:hover { border-color: var(--accent); }
   .aff-card.pension { border-color: rgba(126,207,179,0.3); background: linear-gradient(135deg, #241a0e, #0d2820); }
   .aff-card.pension:hover { border-color: var(--accent3); }
+  .aff-card.revolut { border-color: rgba(100,180,255,0.3); background: linear-gradient(135deg, #241a0e, #0a1020); }
+  .aff-card.revolut:hover { border-color: #64b4ff; }
+  .aff-card.kofi { border-color: rgba(255,100,100,0.25); background: linear-gradient(135deg, #241a0e, #200a0a); }
+  .aff-card.kofi:hover { border-color: #ff6464; }
+  .aff-card.cashback { border-color: rgba(126,207,179,0.3); background: linear-gradient(135deg, #0a1e1a, #0d2820); }
+  .aff-card.cashback:hover { border-color: var(--accent3); }
+  .aff-card.gaming { border-color: rgba(255,159,67,0.3); background: linear-gradient(135deg, #241a0e, #2e1500); }
+  .aff-card.gaming:hover { border-color: var(--accent5); }
+  .aff-card.lebara { border-color: rgba(155,139,255,0.3); background: linear-gradient(135deg, #150a2e, #1a0d38); }
+  .aff-card.lebara:hover { border-color: var(--accent4); }
   .aff-badge { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.2rem 0.6rem; border-radius: 999px; background: rgba(245,166,35,0.15); color: var(--accent); width: fit-content; }
   .aff-badge.green { background: rgba(126,207,179,0.15); color: var(--accent3); }
   .aff-badge.red { background: rgba(224,92,92,0.15); color: var(--accent2); }
   .aff-badge.purple { background: rgba(155,139,255,0.15); color: var(--accent4); }
+  .aff-badge.blue { background: rgba(100,180,255,0.15); color: #64b4ff; }
+  .aff-badge.orange { background: rgba(255,159,67,0.15); color: var(--accent5); }
   .aff-name { font-family: 'Barlow Condensed', sans-serif; font-size: 1.4rem; font-weight: 700; color: var(--text); }
   .aff-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.6; flex: 1; }
   .aff-link { font-size: 0.82rem; font-weight: 700; color: var(--accent); }
   .aff-link.green { color: var(--accent3); }
   .aff-link.red { color: var(--accent2); }
   .aff-link.purple { color: var(--accent4); }
+  .aff-link.blue { color: #64b4ff; }
+  .aff-link.orange { color: var(--accent5); }
  
-  /* DIVIDER */
+  /* KOFI SUPPORT BOX */
+  .kofi-box { background: linear-gradient(135deg, #200a0a, #2e1010); border: 1px solid rgba(255,100,100,0.3); border-radius: 20px; padding: 2.5rem; text-align: center; margin-bottom: 2rem; }
+  .kofi-box h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 2rem; font-weight: 900; color: #ff9999; margin-bottom: 0.8rem; }
+  .kofi-box p { color: var(--muted); font-size: 0.95rem; line-height: 1.7; max-width: 480px; margin: 0 auto 1.5rem; }
+ 
+  /* GAMBLING WARNING */
+  .warning-note { background: rgba(224,92,92,0.08); border: 1px solid rgba(224,92,92,0.25); border-radius: 10px; padding: 0.8rem 1.2rem; font-size: 0.78rem; color: var(--accent2); margin-top: 0.5rem; line-height: 1.5; }
+ 
   .divider { width: 100%; height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); opacity: 0.2; }
   .divider.green { background: linear-gradient(90deg, transparent, var(--accent3), transparent); }
   .divider.purple { background: linear-gradient(90deg, transparent, var(--accent4), transparent); }
@@ -231,42 +213,29 @@
   <div class="section-label">🍎 The Biggest Struggle</div>
   <h2>FOOD<br>COSTS</h2>
   <p class="section-intro">Food prices have shot up and benefits haven't kept up. Here's how people across the UK are actually eating well on almost nothing.</p>
- 
   <div class="tips-grid">
-    <div class="tip-row"><div class="tip-num">01</div><div class="tip-text"><strong>Plan your meals weekly</strong><span>Write a meal plan before you shop. Buy only what you need — no waste, no last-minute expensive shops.</span></div></div>
-    <div class="tip-row"><div class="tip-num">02</div><div class="tip-text"><strong>Shop at Aldi first</strong><span>Aldi is consistently cheapest in the UK. Do your main shop there, small top-ups at Tesco only when needed.</span></div></div>
+    <div class="tip-row"><div class="tip-num">01</div><div class="tip-text"><strong>Plan your meals weekly</strong><span>Write a meal plan before you shop. Buy only what you need — no waste, no expensive last-minute shops.</span></div></div>
+    <div class="tip-row"><div class="tip-num">02</div><div class="tip-text"><strong>Shop at Aldi first</strong><span>Aldi is consistently cheapest in the UK. Do your main shop there, small top-ups at Tesco only if needed.</span></div></div>
     <div class="tip-row"><div class="tip-num">03</div><div class="tip-text"><strong>Never shop hungry</strong><span>Sounds obvious — it works. A full stomach means you stick to the list and spend far less. Every penny counts.</span></div></div>
-    <div class="tip-row"><div class="tip-num">04</div><div class="tip-text"><strong>Cook from scratch</strong><span>Batch cooking saves both time and money. Rice, pasta, lentils, eggs, tinned tomatoes — cheap, filling, and nutritious.</span></div></div>
+    <div class="tip-row"><div class="tip-num">04</div><div class="tip-text"><strong>Cook from scratch</strong><span>Batch cooking saves time and money. Rice, pasta, lentils, eggs, tinned tomatoes — cheap, filling, and nutritious.</span></div></div>
     <div class="tip-row"><div class="tip-num">05</div><div class="tip-text"><strong>Best days: Sun & Mon</strong><span>Quieter stores and more yellow-sticker reduced items. Sunday evenings especially great for bargains.</span></div></div>
-    <div class="tip-row"><div class="tip-num">06</div><div class="tip-text"><strong>Make your own lunch</strong><span>A packed lunch saves £5–£8 a day compared to buying out. Over a month that's over £100 back in your pocket.</span></div></div>
+    <div class="tip-row"><div class="tip-num">06</div><div class="tip-text"><strong>Make your own lunch</strong><span>A packed lunch saves £5–£8 a day. Over a month that's over £100 back in your pocket.</span></div></div>
   </div>
- 
   <div style="margin-top:2rem;">
     <div class="highlight-box amber">
       <div>
         <h3>🛍️ Too Good To Go</h3>
-        <p>Grab surplus food bags from local restaurants, cafes, and supermarkets for a fraction of the price. Surprise bags typically cost £2–£5 and save perfectly good food from being binned. Download it completely free.</p>
-        <div class="pills">
-          <span class="pill">Check yellow sticker times</span>
-          <span class="pill">Sunday nights = gold</span>
-          <span class="pill">Free to download</span>
-        </div>
+        <p>Grab surplus food bags from local restaurants, cafes, and supermarkets for a fraction of the price. Surprise bags typically cost £2–£5 and save perfectly good food from being binned. Download completely free.</p>
+        <div class="pills"><span class="pill">Check yellow sticker times</span><span class="pill">Sunday nights = gold</span><span class="pill">Free to download</span></div>
       </div>
       <div class="box-emoji">♻️</div>
     </div>
- 
     <div class="highlight-box green">
       <div>
         <h3 style="color:var(--accent3);">🥫 The Trussell Trust — Food Banks</h3>
-        <p>There is absolutely no shame in using a food bank. The Trussell Trust runs over 1,300 food bank centres across the UK. You'll need a referral voucher from a GP, social worker, Citizens Advice, or JobCentre. Find your nearest one at their website.</p>
-        <div class="pills">
-          <span class="pill green">Over 1,300 UK locations</span>
-          <span class="pill green">Referral needed — ask your GP</span>
-          <span class="pill green">3 days of emergency food</span>
-        </div>
-        <div style="margin-top:1.2rem;">
-          <a href="https://www.trusselltrust.org/get-help/find-a-foodbank/" class="btn btn-green" target="_blank" rel="noopener">Find Your Nearest Food Bank →</a>
-        </div>
+        <p>There is absolutely no shame in using a food bank. The Trussell Trust runs over 1,300 food bank centres across the UK. You'll need a referral voucher from a GP, social worker, Citizens Advice, or JobCentre. Find your nearest one now.</p>
+        <div class="pills"><span class="pill green">Over 1,300 UK locations</span><span class="pill green">Referral via GP or JobCentre</span><span class="pill green">3 days emergency food</span></div>
+        <div style="margin-top:1.2rem;"><a href="https://www.trusselltrust.org/get-help/find-a-foodbank/" class="btn btn-green" target="_blank" rel="noopener">Find Your Nearest Food Bank →</a></div>
       </div>
       <div class="box-emoji">🥫</div>
     </div>
@@ -280,12 +249,11 @@
   <div class="section-label">💷 Making It Stretch</div>
   <h2>MONEY &<br>BENEFITS</h2>
   <p class="section-intro">Millions of people are missing out on benefits they're entitled to. Make sure you're getting everything you're owed before cutting back on anything else.</p>
- 
   <div class="cards">
-    <div class="card"><div class="card-icon">🔍</div><h3>Check What You're Owed</h3><p>An estimated £19 billion in benefits goes unclaimed every year in the UK. Use the Entitledto or Turn2Us calculators to check exactly what you should be getting. It takes 10 minutes.</p><div class="card-tip">💡 £19 billion unclaimed every year</div></div>
-    <div class="card"><div class="card-icon">🏛️</div><h3>Citizens Advice — Free Help</h3><p>Citizens Advice offers completely free, independent help with benefits, debt, housing, and employment. Walk in or use their website. They know the system inside out — use them.</p><div class="card-tip">✅ 100% free, totally confidential</div></div>
-    <div class="card"><div class="card-icon">💳</div><h3>Universal Credit Tips</h3><p>If you're on UC, request an advance payment if you're waiting for your first payment. Also check if you qualify for Council Tax Reduction — many people don't know it exists.</p><div class="card-tip">⚡ Ask about hardship payments too</div></div>
-    <div class="card"><div class="card-icon">📋</div><h3>Budgeting Basics</h3><p>Write down every penny coming in and going out. Even a rough budget on paper reveals where money disappears. Knowing is the first step — don't be scared to look.</p><div class="card-tip">📝 Awareness = control</div></div>
+    <div class="card"><div class="card-icon">🔍</div><h3>Check What You're Owed</h3><p>An estimated £19 billion in benefits goes unclaimed every year in the UK. Use the Entitledto or Turn2Us calculators to check exactly what you should be getting. It takes 10 minutes.</p><div class="card-tip">💡 £19 billion goes unclaimed yearly</div></div>
+    <div class="card"><div class="card-icon">🏛️</div><h3>Citizens Advice — Free</h3><p>Citizens Advice offers completely free, independent help with benefits, debt, housing, and employment. Walk in or use their website. They know the system inside out — use them.</p><div class="card-tip">✅ 100% free, totally confidential</div></div>
+    <div class="card"><div class="card-icon">💳</div><h3>Universal Credit Tips</h3><p>If you're on UC, request an advance payment if you're waiting for your first payment. Check if you qualify for Council Tax Reduction — many people don't know it exists. Ask about hardship payments too.</p><div class="card-tip">⚡ Always ask about hardship payments</div></div>
+    <div class="card"><div class="card-icon">🏦</div><h3>UC Budgeting Loans</h3><p>If you've been on Universal Credit for 6 months, you may qualify for a Budgeting Loan — interest-free money for essential costs like furniture, clothing, or travel. Apply through your UC journal.</p><div class="card-tip">💰 Interest-free — repaid from UC</div></div>
     <div class="card"><div class="card-icon">💡</div><h3>Cut Energy Bills</h3><p>Apply for the Warm Home Discount (£150 off energy) if you're on qualifying benefits. Also check if you're eligible for free insulation and boiler upgrades through the ECO4 scheme.</p><div class="card-tip">🔥 Warm Home Discount = £150 off</div></div>
     <div class="card"><div class="card-icon">📞</div><h3>Call Before You Cut</h3><p>Before cancelling anything — phone the company first. Energy firms, broadband providers, and councils often have hardship rates, payment holidays, or social tariffs they don't advertise.</p><div class="card-tip">☎️ Always ask — the worst is no</div></div>
   </div>
@@ -298,11 +266,10 @@
   <div class="section-label red">🏠 Keeping A Roof Over Your Head</div>
   <h2>HOUSING<br>RIGHTS</h2>
   <p class="section-intro">Housing rights for people on benefits are stronger than most realise. Know your rights and use the free services available to you.</p>
- 
   <div class="cards">
-    <div class="card red"><div class="card-icon">🏛️</div><h3>Shelter — Free Legal Help</h3><p>Shelter provides free housing advice and legal support. If you're facing eviction, repossession, or homelessness — contact Shelter before anything else. They have specialist advisers for benefit claimants.</p><div class="card-tip red">📞 Helpline: 0808 800 4444</div></div>
-    <div class="card red"><div class="card-icon">💷</div><h3>Housing Benefit / LHA</h3><p>If you're renting privately, check your Local Housing Allowance rate — the government contribution toward rent. Many people don't claim the full amount they're entitled to. Check via your council website.</p><div class="card-tip red">🔎 Check your LHA rate</div></div>
-    <div class="card red"><div class="card-icon">🚫</div><h3>Read Your Tenancy</h3><p>Even on benefits, you have the same rights as any tenant. Landlords cannot evict you without proper notice. Don't leave voluntarily if threatened — always get advice from Shelter first.</p><div class="card-tip red">⚠️ Know your rights before you move</div></div>
+    <div class="card red"><div class="card-icon">🏛️</div><h3>Shelter — Free Legal Help</h3><p>Shelter provides free housing advice and legal support. If you're facing eviction, repossession, or homelessness — contact Shelter before anything else. Specialists in benefit claimant situations.</p><div class="card-tip red">📞 Helpline: 0808 800 4444 (free)</div></div>
+    <div class="card red"><div class="card-icon">💷</div><h3>Housing Benefit / LHA</h3><p>If you're renting privately, check your Local Housing Allowance rate — the government contribution toward rent. Many people don't claim the full amount they're entitled to. Check via your council website.</p><div class="card-tip red">🔎 Check your LHA rate today</div></div>
+    <div class="card red"><div class="card-icon">🚫</div><h3>Know Your Tenancy Rights</h3><p>Even on benefits, you have the same rights as any tenant. Landlords cannot evict you without proper notice. Don't leave voluntarily if threatened — always get advice from Shelter first.</p><div class="card-tip red">⚠️ Don't leave without advice first</div></div>
     <div class="card red"><div class="card-icon">🏠</div><h3>Council Housing Register</h3><p>If you're in insecure housing, register on your local council's housing list as soon as possible. Waiting times are long but the clock only starts when you register. Do it today.</p><div class="card-tip red">🗓️ Register now — waits are long</div></div>
   </div>
 </section>
@@ -314,7 +281,6 @@
   <div class="section-label purple">🧘 Feeling Overwhelmed?</div>
   <h2>ANXIETY &<br>STRESS</h2>
   <p class="section-intro">Living on benefits is genuinely stressful — the system is hard, money is tight, and it takes a toll. You're not broken. You're human. These tools actually help.</p>
- 
   <div class="ritual-card">
     <h3>🕯️ SELF-PROTECTION RITUAL — 2 MINUTE RESET</h3>
     <p style="color:var(--muted);font-size:0.9rem;margin-bottom:0.5rem;">When the stress and anxiety hits and your mind is racing, try this simple grounding practice.</p>
@@ -327,12 +293,11 @@
     <div class="ritual-affirmation">"I am safe. I am protected. I am loved."</div>
     <p style="color:var(--muted);font-size:0.8rem;margin-top:1.5rem;">This grounding technique brings you back to the present moment and calms your nervous system. It works.</p>
   </div>
- 
   <div class="cards" style="margin-top:2rem;">
     <div class="card purple"><div class="card-icon">🌬️</div><h3>Box Breathing</h3><p>In for 4 counts, hold for 4, out for 4, hold for 4. Repeat 4 times. Used by the military under extreme pressure — works just as well for benefits stress and anxiety spirals.</p><div class="card-tip purple">⚡ Works in under 2 minutes</div></div>
     <div class="card purple"><div class="card-icon">👋</div><h3>5-4-3-2-1 Grounding</h3><p>Name 5 things you see, 4 you can touch, 3 you can hear, 2 you can smell, 1 you can taste. Instantly pulls you out of panic and back into the present moment.</p><div class="card-tip purple">🧠 Classic grounding technique</div></div>
-    <div class="card purple"><div class="card-icon">🚶</div><h3>Move Your Body</h3><p>A 10-minute walk outside genuinely reduces cortisol levels. You don't need a gym. The park is free, fresh air is free, and both genuinely help lift your mood.</p><div class="card-tip purple">🌿 Free and instant</div></div>
-    <div class="card purple"><div class="card-icon">😴</div><h3>Protect Your Sleep</h3><p>Everything feels worse when you're exhausted. Anxiety, low mood, and hopelessness are all amplified by bad sleep. Even small improvements to sleep routine make a big difference.</p><div class="card-tip purple">💤 7–9 hours is the target</div></div>
+    <div class="card purple"><div class="card-icon">🚶</div><h3>Move Your Body</h3><p>A 10-minute walk outside genuinely reduces cortisol levels. You don't need a gym. The park is free, fresh air is free, and both genuinely help lift your mood immediately.</p><div class="card-tip purple">🌿 Free and instant</div></div>
+    <div class="card purple"><div class="card-icon">😴</div><h3>Protect Your Sleep</h3><p>Everything feels worse when you're exhausted. Anxiety, low mood, and hopelessness are all amplified by bad sleep. Even small improvements to your sleep routine make a big difference.</p><div class="card-tip purple">💤 7–9 hours is the target</div></div>
     <div class="card purple"><div class="card-icon">✍️</div><h3>Journal It Out</h3><p>Write down what's worrying you. Getting thoughts out of your head and onto paper reduces their power significantly. Even 5 minutes of free writing helps enormously.</p><div class="card-tip purple">📓 No rules — just write</div></div>
     <div class="card purple"><div class="card-icon">🗣️</div><h3>Talk to Someone</h3><p>Keeping it all inside makes everything worse. Tell a friend, family member, GP, or counsellor how you're feeling. You deserve support — free options are listed below.</p><div class="card-tip purple">💬 You don't have to do this alone</div></div>
   </div>
@@ -345,28 +310,22 @@
   <div class="section-label green">💚 Your Wellbeing Matters</div>
   <h2>STAYING<br>WELL</h2>
   <p class="section-intro">When money is tight it's easy to let your own wellbeing slip. Here are completely free things that genuinely make a difference.</p>
- 
   <div class="small-grid">
     <div class="small-card"><div class="small-icon">📚</div><h4>Libraries Are Free</h4><p>Books, internet, warmth, and community — all free. Most libraries also run free wellbeing groups and activities.</p></div>
     <div class="small-card"><div class="small-icon">🌳</div><h4>Get Outside</h4><p>Parks, canals, walking routes — nature is free and scientifically proven to reduce anxiety and improve mood.</p></div>
     <div class="small-card"><div class="small-icon">🤝</div><h4>Volunteer Locally</h4><p>Gives you routine, purpose, and community. Many volunteering roles lead to paid work. A genuine game-changer.</p></div>
     <div class="small-card"><div class="small-icon">🧘</div><h4>Free Yoga & Meditation</h4><p>YouTube has thousands of free guided sessions. Even 10 minutes of mindfulness daily changes how you handle stress.</p></div>
-    <div class="small-card"><div class="small-icon">☎️</div><h4>Stay Connected</h4><p>Loneliness and poverty often come together. Reach out to one person this week — a text, a call, anything. Connection matters.</p></div>
+    <div class="small-card"><div class="small-icon">☎️</div><h4>Stay Connected</h4><p>Loneliness and poverty often go together. Reach out to one person this week — a text, a call, anything. Connection matters.</p></div>
     <div class="small-card"><div class="small-icon">🎨</div><h4>Create Something</h4><p>Drawing, writing, cooking, gardening — creative activities rebuild confidence and give your brain a healthy focus.</p></div>
-    <div class="small-card"><div class="small-icon">💊</div><h4>Free Prescriptions</h4><p>If you're on Universal Credit, Income Support, or other qualifying benefits — you get free NHS prescriptions. Claim what you're owed.</p></div>
-    <div class="small-card"><div class="small-icon">🦷</div><h4>Free NHS Dental</h4><p>People on qualifying benefits are entitled to free NHS dental treatment. Many don't know this. Check your entitlement now.</p></div>
+    <div class="small-card"><div class="small-icon">💊</div><h4>Free Prescriptions</h4><p>If you're on Universal Credit, Income Support, or qualifying benefits — you get free NHS prescriptions. Claim what you're owed.</p></div>
+    <div class="small-card"><div class="small-icon">🦷</div><h4>Free NHS Dental</h4><p>People on qualifying benefits are entitled to free NHS dental treatment. Many don't know this. Check your entitlement today.</p></div>
   </div>
- 
   <div style="margin-top:2rem;">
     <div class="highlight-box green">
       <div>
         <h3 style="color:var(--accent3);">🚨 Panic Attack? Do This Now</h3>
         <p>If you feel one coming — stop. Sit or lie down. Do 3 rounds of box breathing (in 4, hold 4, out 4, hold 4). Remind yourself: this feeling will pass. It always does. You are safe. You have survived every difficult day so far.</p>
-        <div class="pills">
-          <span class="pill green">This feeling will pass</span>
-          <span class="pill green">You are safe right now</span>
-          <span class="pill green">Breathe — just breathe</span>
-        </div>
+        <div class="pills"><span class="pill green">This feeling will pass</span><span class="pill green">You are safe right now</span><span class="pill green">Breathe — just breathe</span></div>
       </div>
       <div class="box-emoji">🧘</div>
     </div>
@@ -380,12 +339,11 @@
   <div class="section-label green">💙 You Are Not Alone</div>
   <h2>MENTAL<br>HEALTH</h2>
   <p class="section-intro">Living on a low income is one of the biggest risk factors for mental health struggles. There is free support available right now — please use it.</p>
- 
   <div class="helpline-grid">
     <a href="https://www.nhs.uk/mental-health/" class="helpline-card" target="_blank" rel="noopener">
       <div class="helpline-tag">NHS — Free UK Healthcare</div>
       <div class="helpline-name">🏥 NHS Mental Health</div>
-      <div class="helpline-desc">Your first port of call for mental health support in the UK. Find local services, self-referral options, and urgent help. Your GP can refer you to free talking therapies.</div>
+      <div class="helpline-desc">Your first port of call for mental health support. Find local services, self-referral options, and urgent help. Your GP can refer you to free talking therapies.</div>
       <div class="helpline-contact">nhs.uk/mental-health →</div>
     </a>
     <a href="https://everyturn.org" class="helpline-card" target="_blank" rel="noopener">
@@ -394,42 +352,37 @@
       <div class="helpline-desc">Provides mental health and wellbeing support for communities across the UK. Compassionate, accessible care for people of all backgrounds and circumstances.</div>
       <div class="helpline-contact">everyturn.org →</div>
     </a>
-    <a href="https://www.overcome.org.uk" class="helpline-card" target="_blank" rel="noopener">
+    <a href="https://www.overcome.org" class="helpline-card" target="_blank" rel="noopener">
       <div class="helpline-tag">Online CBT Support</div>
       <div class="helpline-name">💪 Overcome</div>
-      <div class="helpline-desc">Online platform offering CBT-based mental health support, anxiety tools, and self-help programmes. Accessible 24/7 — no referral or waiting list needed.</div>
-      <div class="helpline-contact">overcome.org.uk →</div>
+      <div class="helpline-desc">Online CBT-based support, anxiety tools, and self-help programmes. Accessible 24/7 — no referral or waiting list needed.</div>
+      <div class="helpline-contact">overcome.org →</div>
     </a>
     <a href="https://www.samaritans.org" class="helpline-card" target="_blank" rel="noopener">
       <div class="helpline-tag">Crisis Support — 24/7 Free</div>
       <div class="helpline-name">📞 Samaritans</div>
-      <div class="helpline-desc">Free, confidential listening service available 24 hours a day, 7 days a week. You don't have to be suicidal to call — just struggling, stressed, or lonely is enough.</div>
+      <div class="helpline-desc">Free, confidential listening service available 24 hours a day, 7 days a week. Just struggling, stressed, or lonely is enough reason to call.</div>
       <div class="helpline-contact">Call FREE: 116 123</div>
     </a>
     <a href="https://www.mind.org.uk" class="helpline-card" target="_blank" rel="noopener">
       <div class="helpline-tag">Mental Health Charity</div>
       <div class="helpline-name">🧠 Mind</div>
-      <div class="helpline-desc">One of the UK's leading mental health charities. Excellent resources on anxiety, depression, stress, and finding the right free support in your local area.</div>
+      <div class="helpline-desc">One of the UK's leading mental health charities. Excellent free resources on anxiety, depression, stress, and finding support in your local area.</div>
       <div class="helpline-contact">mind.org.uk →</div>
     </a>
     <a href="https://www.citizensadvice.org.uk" class="helpline-card" target="_blank" rel="noopener">
       <div class="helpline-tag">Free Advice — Benefits & Debt</div>
       <div class="helpline-name">⚖️ Citizens Advice</div>
-      <div class="helpline-desc">Financial stress is mental health stress. Citizens Advice offers free, confidential help with benefits, debt, housing, and more — tackling the root causes of anxiety.</div>
+      <div class="helpline-desc">Financial stress is mental health stress. Free help with benefits, debt, housing, and more — tackling the root causes of anxiety head on.</div>
       <div class="helpline-contact">citizensadvice.org.uk →</div>
     </a>
   </div>
- 
   <div style="margin-top:2rem;">
     <div class="highlight-box purple">
       <div>
         <h3 style="color:#c4b5fd;">💬 Asking For Help Is Strength</h3>
         <p>There is no shame in struggling. There is no shame in asking for help. Millions of people in the UK are in the exact same situation right now. You are not alone. Your GP can refer you to free talking therapy — please make that appointment this week.</p>
-        <div class="pills">
-          <span class="pill purple">Free NHS talking therapies</span>
-          <span class="pill purple">Completely confidential</span>
-          <span class="pill purple">No judgement — ever</span>
-        </div>
+        <div class="pills"><span class="pill purple">Free NHS talking therapies</span><span class="pill purple">Completely confidential</span><span class="pill purple">No judgement — ever</span></div>
       </div>
       <div class="box-emoji">💙</div>
     </div>
@@ -443,67 +396,117 @@
   <div class="section-label">💰 Your Future Still Exists</div>
   <h2>BUILD A<br>BETTER FUTURE</h2>
   <p class="section-intro">Being on benefits right now doesn't mean you'll always be on benefits. Small steps today — even tiny ones — change where you end up.</p>
- 
   <div class="highlight-box amber">
     <div>
       <h3 style="color:var(--accent);">🐣 Penfold — Start A Pension For Free</h3>
-      <p>Even on a low income, starting a pension makes a difference. The government adds 25% tax relief on top of everything you put in — meaning if you save £40, it becomes £50 in your pot automatically. You can start with just £1 a month. The earlier you start, the earlier you could retire. Penfold is built for people just starting out.</p>
-      <div class="pills" style="margin-bottom:1.2rem;">
-        <span class="pill">Start from just £1</span>
-        <span class="pill">Government adds 25% free</span>
-        <span class="pill">No employer needed</span>
-        <span class="pill">Retire earlier</span>
-      </div>
+      <p>Even on a low income, starting a pension makes a difference. The government adds 25% tax relief on top of everything you put in — meaning if you save £40, it becomes £50 in your pot automatically. You can start with just £1 a month. The earlier you start, the earlier you could retire.</p>
+      <div class="pills" style="margin-bottom:1.2rem;"><span class="pill">Start from just £1</span><span class="pill">Government adds 25% free</span><span class="pill">No employer needed</span><span class="pill">Retire earlier</span></div>
       <a href="https://account.getpenfold.com/refer/tomgallagher" class="btn btn-primary" target="_blank" rel="noopener">Open Free Penfold Account →</a>
     </div>
     <div class="box-emoji">🥚</div>
   </div>
- 
   <div class="cards" style="margin-top:1.5rem;">
-    <div class="card"><div class="card-icon">📈</div><h3>Compound Interest</h3><p>Even saving £10 a month from now builds up. Over 20 years with compound interest that modest amount becomes real money. Time is your biggest asset — even a tiny amount started now beats waiting.</p><div class="card-tip">⏰ Small + early beats big + late</div></div>
-    <div class="card"><div class="card-icon">🏛️</div><h3>Government Tops You Up</h3><p>The government adds 25% tax relief to pension contributions. Save £80 and it automatically becomes £100 in your pot. That's free money from HMRC — completely regardless of your income level.</p><div class="card-tip">💸 25% free — automatic</div></div>
-    <div class="card"><div class="card-icon">🎯</div><h3>Free Skills & Training</h3><p>The National Careers Service offers free skills assessments and training courses. Many councils offer free digital skills, food hygiene, and trade qualifications. Knowledge is the route out.</p><div class="card-tip">📚 National Careers Service — free</div></div>
+    <div class="card"><div class="card-icon">📈</div><h3>Compound Interest</h3><p>Even saving £10 a month builds up. Over 20 years with compound interest that modest amount becomes real money. Time is your biggest asset — a tiny amount started now beats waiting.</p><div class="card-tip">⏰ Small + early beats big + late</div></div>
+    <div class="card"><div class="card-icon">🏛️</div><h3>Government Tops You Up</h3><p>The government adds 25% tax relief to pension contributions — regardless of your income. Save £80 and it automatically becomes £100. That's free money from HMRC.</p><div class="card-tip">💸 25% free — automatic</div></div>
+    <div class="card"><div class="card-icon">🎯</div><h3>Free Skills & Training</h3><p>The National Careers Service offers free skills assessments and training courses. Many councils offer free digital skills, food hygiene, and trade qualifications. Knowledge is the route forward.</p><div class="card-tip">📚 National Careers Service — free</div></div>
   </div>
 </section>
  
 <div class="divider"></div>
  
-<!-- DEALS / HELP -->
+<!-- KO-FI -->
+<section style="max-width:1100px;margin:0 auto;padding:0 2rem 2rem;">
+  <div class="kofi-box">
+    <h3>☕ This Guide Helped You? Buy Tom a Coffee</h3>
+    <p>This guide is completely free and always will be. If it helped you out and you're in a position to, a small Ko-fi tip helps keep guides like this running and free for everyone who needs them. Totally optional — no pressure whatsoever.</p>
+    <a href="https://ko-fi.com/tomgallagher" class="btn btn-secondary" target="_blank" rel="noopener" style="border-color:#ff6464;color:#ff9999;">☕ Buy Tom a Coffee →</a>
+  </div>
+</section>
+ 
+<div class="divider"></div>
+ 
+<!-- DEALS -->
 <section id="deals">
-  <div class="section-label">🔗 Help, Support & Deals</div>
+  <div class="section-label">🔗 Help, Deals & Affiliate Partners</div>
   <h2>GET<br>HELP NOW</h2>
-  <p class="section-intro">Every link below is either completely free or an affiliate link that costs you nothing extra and helps keep this guide free.</p>
+  <p class="section-intro">Every link below is either completely free or an affiliate link that costs you nothing extra — and helps keep this guide free for everyone.</p>
  
   <div class="affiliate-grid">
  
+    <!-- LLOYDS -->
     <a href="https://smallville1979.github.io/lloyds-50/" class="aff-card featured" target="_blank" rel="noopener">
       <div class="aff-badge">🌟 Banking</div>
       <div class="aff-name">🏦 Lloyds Bank — Free £50</div>
-      <div class="aff-desc">Open a Lloyds account and claim £50 cash. Basic accounts available for everyone — no credit check required for the basic option.</div>
+      <div class="aff-desc">Open a Lloyds account and claim £50 cash. Basic accounts available for everyone — a safe place to keep your money and manage payments.</div>
       <div class="aff-link">Claim Your Free £50 →</div>
     </a>
  
+    <!-- REVOLUT -->
+    <a href="https://revolut.com/referral/?referral-code=tomfd6a!MAR1-26-VR-GB&geo-redirect" class="aff-card revolut" target="_blank" rel="noopener">
+      <div class="aff-badge blue">💳 Digital Banking</div>
+      <div class="aff-name">💳 Revolut</div>
+      <div class="aff-desc">Join over 70 million users on Revolut. Free account, instant spending notifications, budgeting tools, and fee-free spending abroad. Great alongside your main bank.</div>
+      <div class="aff-link blue">Join Free with Referral →</div>
+    </a>
+ 
+    <!-- PENFOLD -->
     <a href="https://account.getpenfold.com/refer/tomgallagher" class="aff-card pension" target="_blank" rel="noopener">
       <div class="aff-badge green">💰 Pension</div>
       <div class="aff-name">🐣 Penfold Pension</div>
-      <div class="aff-desc">Start saving for your future today — even £1 a month. Government adds 25% on top automatically. The earlier you start, the better.</div>
+      <div class="aff-desc">Start saving for your future — even £1 a month. Government adds 25% on top automatically. The earlier you start, the better your future looks.</div>
       <div class="aff-link green">Start Free →</div>
     </a>
  
+    <!-- TOPCASHBACK -->
+    <a href="https://www.topcashback.co.uk/ref/q1979" class="aff-card cashback" target="_blank" rel="noopener">
+      <div class="aff-badge green">💸 Cashback</div>
+      <div class="aff-name">💰 TopCashback</div>
+      <div class="aff-desc">Get cashback on things you're already buying online — energy, insurance, supermarkets, and more. Free to join. One of the best cashback sites in the UK.</div>
+      <div class="aff-link green">Join Free & Earn Cashback →</div>
+    </a>
+ 
+    <!-- COMPLETE SAVINGS -->
+    <a href="https://www.completesavings.co.uk" class="aff-card cashback" target="_blank" rel="noopener">
+      <div class="aff-badge green">🎁 Savings Club</div>
+      <div class="aff-name">🎁 Complete Savings</div>
+      <div class="aff-desc">Get cashback on everyday purchases from hundreds of UK retailers. Earn money back on things you'd be buying anyway — worth checking what's available near you.</div>
+      <div class="aff-link green">Start Saving →</div>
+    </a>
+ 
+    <!-- LEBARA -->
+    <a href="https://aklam.io/vY1l8Ryb" class="aff-card lebara" target="_blank" rel="noopener">
+      <div class="aff-badge purple">📱 Mobile</div>
+      <div class="aff-name">📱 Lebara SIM</div>
+      <div class="aff-desc">Cheap SIM-only plans starting from just a few pounds a month. Great for people on a budget who need to stay connected without paying over the odds.</div>
+      <div class="aff-link purple">Get a Cheap SIM →</div>
+    </a>
+ 
+    <!-- PLAYATOM -->
+    <a href="https://playatom.co.uk/register?ref=TOM-C5850D8B" class="aff-card gaming" target="_blank" rel="noopener">
+      <div class="aff-badge orange">🎮 Entertainment</div>
+      <div class="aff-name">⚡ PlayAtom</div>
+      <div class="aff-desc">Online gaming and entertainment platform. Register with this referral link to get started. Always play responsibly and only spend what you can truly afford.</div>
+      <div class="aff-link orange">Register Free →</div>
+      <div class="warning-note">⚠️ 18+ only. Gambling can be addictive. Please play responsibly. GamStop: gamstop.co.uk | BeGambleAware: begambleaware.org</div>
+    </a>
+ 
+    <!-- TRUSSELL TRUST -->
     <a href="https://www.trusselltrust.org/get-help/find-a-foodbank/" class="aff-card" target="_blank" rel="noopener">
       <div class="aff-badge green">🥫 Food Banks</div>
       <div class="aff-name">🥫 Trussell Trust</div>
-      <div class="aff-desc">Find your nearest food bank. Over 1,300 locations across the UK. Need a referral — ask your GP, JobCentre, or Citizens Advice.</div>
+      <div class="aff-desc">Find your nearest food bank. 1,300+ locations across the UK. Need a referral from your GP, JobCentre, or Citizens Advice — completely free emergency food.</div>
       <div class="aff-link green">Find Nearest Food Bank →</div>
     </a>
  
+    <!-- TOO GOOD TO GO -->
     <a href="https://toogoodtogo.com/en-gb" class="aff-card" target="_blank" rel="noopener">
       <div class="aff-badge">Food Saving</div>
       <div class="aff-name">♻️ Too Good To Go</div>
-      <div class="aff-desc">Rescue surplus food bags from restaurants and supermarkets near you. £2–5 per bag. Completely free to download and use.</div>
+      <div class="aff-desc">Rescue surplus food bags from restaurants and supermarkets near you. £2–5 per bag. Completely free to download and use right now.</div>
       <div class="aff-link">Download Free →</div>
     </a>
  
+    <!-- ENTITLEDTO -->
     <a href="https://www.entitledto.co.uk" class="aff-card" target="_blank" rel="noopener">
       <div class="aff-badge">Benefits Check</div>
       <div class="aff-name">🔍 Entitledto</div>
@@ -511,20 +514,23 @@
       <div class="aff-link">Check Your Entitlement →</div>
     </a>
  
+    <!-- TURN2US -->
     <a href="https://www.turn2us.org.uk" class="aff-card" target="_blank" rel="noopener">
       <div class="aff-badge">Benefits & Grants</div>
       <div class="aff-name">💛 Turn2Us</div>
-      <div class="aff-desc">Find benefits, grants, and financial support you might be missing. Turn2Us helps people access welfare benefits and charitable grants.</div>
+      <div class="aff-desc">Find benefits, grants, and financial support you might be missing. Helps people access welfare benefits and charitable grants across the UK.</div>
       <div class="aff-link">Find Free Support →</div>
     </a>
  
+    <!-- CITIZENS ADVICE -->
     <a href="https://www.citizensadvice.org.uk" class="aff-card" target="_blank" rel="noopener">
       <div class="aff-badge">Free Advice</div>
       <div class="aff-name">⚖️ Citizens Advice</div>
-      <div class="aff-desc">Free, independent advice on benefits, debt, housing, and legal rights. Walk in, call, or use their website. They know the system — use them.</div>
+      <div class="aff-desc">Free, independent advice on benefits, debt, housing, and legal rights. Walk in, call, or use their website. They know the system — use them freely.</div>
       <div class="aff-link">Get Free Advice →</div>
     </a>
  
+    <!-- SHELTER -->
     <a href="https://www.shelter.org.uk" class="aff-card" target="_blank" rel="noopener">
       <div class="aff-badge red">Housing</div>
       <div class="aff-name">🏠 Shelter</div>
@@ -532,13 +538,15 @@
       <div class="aff-link red">Get Free Housing Help →</div>
     </a>
  
+    <!-- SAMARITANS -->
     <a href="https://www.samaritans.org" class="aff-card" target="_blank" rel="noopener">
       <div class="aff-badge purple">Mental Health</div>
       <div class="aff-name">📞 Samaritans — 116 123</div>
-      <div class="aff-desc">Free confidential support, 24 hours a day, 7 days a week. You don't have to be in crisis to call. Struggling is enough.</div>
+      <div class="aff-desc">Free confidential support, 24 hours a day, 7 days a week. You don't have to be in crisis to call — just struggling is enough reason to reach out.</div>
       <div class="aff-link purple">Call Free: 116 123 →</div>
     </a>
  
+    <!-- EVERYTURN -->
     <a href="https://everyturn.org" class="aff-card" target="_blank" rel="noopener">
       <div class="aff-badge green">Mental Health</div>
       <div class="aff-name">🌱 Everyturn</div>
@@ -546,18 +554,20 @@
       <div class="aff-link green">everyturn.org →</div>
     </a>
  
-    <a href="https://www.overcome.org.uk" class="helpline-card" style="border-radius:14px;background:var(--card);" target="_blank" rel="noopener">
-      <div class="helpline-tag">Online CBT Support</div>
-      <div class="helpline-name" style="font-size:1.4rem;">💪 Overcome</div>
-      <div class="helpline-desc">CBT-based online mental health support and anxiety tools. Available 24/7. No referral needed — just go to the site and start.</div>
-      <div class="helpline-contact" style="font-size:0.82rem;">overcome.org.uk →</div>
+    <!-- OVERCOME -->
+    <a href="https://www.overcome.org" class="aff-card" target="_blank" rel="noopener">
+      <div class="aff-badge green">Online Support</div>
+      <div class="aff-name">💪 Overcome</div>
+      <div class="aff-desc">CBT-based online mental health support and anxiety tools. Available 24/7. No referral needed — just visit the site and start immediately.</div>
+      <div class="aff-link green">overcome.org →</div>
     </a>
  
-    <a href="https://www.aldi.co.uk/store-finder" class="aff-card" target="_blank" rel="noopener">
-      <div class="aff-badge">Groceries</div>
-      <div class="aff-name">🛒 Aldi UK</div>
-      <div class="aff-desc">Consistently cheapest supermarket in the UK. Do your main shop here. Plan your meals first and stick to the list.</div>
-      <div class="aff-link">Find Nearest Store →</div>
+    <!-- KO-FI -->
+    <a href="https://ko-fi.com/tomgallagher" class="aff-card kofi" target="_blank" rel="noopener">
+      <div class="aff-badge red">☕ Support</div>
+      <div class="aff-name">☕ Buy Tom a Coffee</div>
+      <div class="aff-desc">This guide is free forever. If it helped you and you can spare a small tip, it goes toward keeping resources like this free for everyone who needs them.</div>
+      <div class="aff-link red">ko-fi.com/tomgallagher →</div>
     </a>
  
   </div>
@@ -570,7 +580,8 @@
   <p>Free advice for everyone who needs it. Share this page with someone who could use it right now.</p>
   <p style="margin-top:0.8rem;">Some links are affiliate links. They cost you <strong>nothing extra</strong> and help keep this guide free forever.</p>
   <p style="margin-top:0.5rem;">If you're struggling right now — please reach out. <strong>Samaritans: 116 123</strong> (free, 24/7) · NHS 111 · Everyturn · Overcome.org · Citizens Advice</p>
-  <p style="margin-top:1rem;font-size:0.75rem;">Built with ❤️ for everyone going through a hard time · Trussell Trust · Citizens Advice · <strong>Penfold</strong> · Everyturn · NHS · Samaritans</p>
+  <p style="margin-top:0.5rem;font-size:0.75rem;">🎮 Gambling: 18+ only. Please play responsibly. GamStop: gamstop.co.uk · BeGambleAware: begambleaware.org</p>
+  <p style="margin-top:1rem;font-size:0.75rem;">Built with ❤️ for everyone going through a hard time · <strong>Revolut · Penfold · TopCashback · Lebara · Trussell Trust · Samaritans · NHS</strong></p>
 </footer>
  
 </body>
